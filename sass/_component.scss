@@ -1,0 +1,233 @@
+.hero{
+  position:relative;
+  height:calc(100vh - 100px);
+  min-height:440px;
+  background:var(--primary);
+  color:white;
+  &.hero--short{
+    height:90vh;
+  }
+}
+.hero__text{
+  z-index:1;
+  position:absolute;
+  width:100%;
+  bottom:20%;
+  @include transform(translateY(-50%));
+  text-align:center;
+}
+.hero__awards{
+  z-index:2;
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  padding:40px 0;
+  //background:rgba(228, 33, 33, 0.35);
+  background:rgba(40, 55, 70, 0.5);
+  //background:rgba(80, 80, 80, 0.5);
+  backdrop-filter: blur(8px);
+  .container{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:90px;
+  }
+}
+.hero__award{
+  width:50%;
+  img{
+    opacity:0.7;
+  }
+  p{
+    font-size:1.4rem;
+    padding-left:20px;
+  }
+}
+
+
+.home-bonuses{
+  background:var(--red) url('../img/home/home-bonuses-bg.jpg') no-repeat center right;
+  background-size:auto 100%;
+  color:white;
+  padding:120px 0;
+}
+.home-bonuses_item{
+  text-align:center;
+  border-right:1px solid rgba(255,255,255,0.5);
+  padding:15px 0;
+  &:last-child{
+    border-right:none;
+  }
+}
+
+.home-flatbed-training{
+  .img--full{
+    background:var(--primary);
+  }
+
+}
+
+
+// PAY SCALE
+.pay-scale{
+  padding:120px 0;
+  background:var(--red) url('../img/drive-with-us/pay-scale-bg.jpg') no-repeat bottom right;
+  background-size:auto 65%;
+  color:white;
+  .pay-scale_rows-col{
+    &:first-child{
+      width:50%;
+    }
+    &:nth-child(2), &:nth-child(3){
+      width:25%;
+    }
+  }
+  p{
+    color:white;
+  }
+  li{
+    font-size:1.6rem;
+    line-height:1.2;
+    padding:10px 0;
+    border-bottom:1px solid rgba(255,255,255,0.6);
+  }
+}
+
+// CAREER OFFERINGS
+.career-offerings{
+  padding:60px 0;
+}
+.career-offerings_item{
+  padding:60px 0;
+  border-bottom:1px solid #ddd;
+  &:last-child{
+    border-bottom:none;
+  }
+  .text--list{
+    width:50%;
+  }
+}
+
+// ORIENTATION LOCATIONS
+.orientation-locations{
+  background:var(--red) url('../img/home/home-bonuses-bg.jpg') no-repeat center right;
+  background-size:auto 100%;
+  color:white;
+  padding:120px 0;
+  i{
+    font-size:4rem;
+    margin-bottom:10px;
+  }
+}
+.orientation-locations_item{
+  text-align:center;
+  border-right:1px solid rgba(255,255,255,0.5);
+  padding:15px 0;
+  &:last-child{
+    border-right:none;
+  }
+}
+
+// VIDEO GRID
+.video-grid{
+  padding:120px 0;
+  background:#f6f6f6;
+}
+.video-grid_item-thumb{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  background:var(--primary);
+  img{
+    @include opacity(0.8);
+  }
+}
+
+// OUR TEAM 
+
+.team-grid{
+
+}
+.team-grid_item{
+  img{
+    display:block;
+    width:100%;
+    height:auto;
+  }
+
+}
+
+
+/* ––––––––––––––––––––––––––––––––––––––––––––
+
+Modals
+
+––––––––––––––––––––––––––––––––––––––––––– */
+#video-modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding:0 30px;
+  background: rgba(20, 20, 20, 0.95);
+  overflow: scroll;
+  .modal {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 960px;
+    padding-bottom: 56.25%;
+    top:50%;
+    left:50%;
+    @include transform(translate3d(-50%,-50%,0));
+  }
+}
+.close-modal-btn {
+  position: absolute;
+  z-index: 88;
+  top: -40px;
+  right: 0;
+  cursor: pointer;
+  i {
+    font-size: 20px;
+    line-height: 40px;
+    color: white;
+  }
+}
+
+#video-modal .video-container {
+  width: 100%;
+}
+#video-modal .video-container iframe {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border:none;
+}
+#video-modal .video-container .ytp-title-text {
+  display: none !important;
+}
+
+@media(min-width:960px){
+  #video-modal {
+    .modal {
+      height:540px;
+      padding-bottom: 0;
+    }
+  }
+
+}
+
+
+.home__content{
+  
+}
+
+
+
