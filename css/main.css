@@ -600,6 +600,9 @@ header .header-nav a {
   color: var(--primary);
   margin: 0 30px 0 0;
 }
+header .header-nav a.active {
+  color: var(--red);
+}
 header .mobile-nav {
   display: none;
   z-index: 100;
